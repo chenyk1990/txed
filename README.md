@@ -44,24 +44,22 @@ wget /address_TBD/ID_0913.npy
 
 -----------
 ## Examples
-
-    1. Check the INFO of signal waveforms
+1. Check the INFO of signal waveforms
     import numpy as np
     allid = np.load("ID_0913.npy")
     signalid=[ii for ii in allid if ii.split("_")[-1]=='EV']
     print('Length of signalid is',len(signalid))
 
-    2. Check the INFO of noise waveforms
+2. Check the INFO of noise waveforms
     import numpy as np
     allid = np.load("ID_0913.npy")
     noiseid=[ii for ii in allid if ii.split("_")[-1]=='NO']
     print('Length of noiseid is',len(noiseid))
-    
-    
-    3. The Ipython Notebooks are examples for playing with the TXED.
+
+3. The Ipython Notebooks are examples for playing with the TXED.
 
     
-    4.. Single-station location example
+4.. Single-station location example
 
 
     
