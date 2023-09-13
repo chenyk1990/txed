@@ -60,6 +60,7 @@ Check the INFO of noise waveforms
     print('Length of noiseid is',len(noiseid))
 
 Print attributes in TXED
+
 	import h5py
 	import numpy as np
 	f = h5py.File("TXED_0913.h5", 'r')
