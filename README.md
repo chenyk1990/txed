@@ -36,21 +36,33 @@ BibTeX:
 Using the latest version
 
     git clone https://github.com/chenyk1990/txed
-    
+
+-----------
+## Download
+wget /address_TBD/TXED_0913.h5
+wget /address_TBD/ID_0913.npy
+
 -----------
 ## Examples
-    The Ipython Notebooks are examples for playing with the models.
-    1. Japanese data example
+
+    1. Check the INFO of signal waveforms
+    import numpy as np
+    allid = np.load("ID_0913.npy")
+    signalid=[ii for ii in allid if ii.split("_")[-1]=='EV']
+    print('Length of signalid is',len(signalid))
+
+    2. Check the INFO of noise waveforms
+    import numpy as np
+    allid = np.load("ID_0913.npy")
+    noiseid=[ii for ii in allid if ii.split("_")[-1]=='NO']
+    print('Length of noiseid is',len(noiseid))
     
-    Please first download the mseed data from
-    https://drive.google.com/drive/folders/1jAkW4kOvwUDYxXW-ty3BTY81fjLF7sKE?usp=share_link
     
-    Then download the manual picks from
-    https://drive.google.com/drive/folders/1KK16j1-WbwqKfTvh5gJbzJrX0fiayhl6?usp=share_link
+    3. The Ipython Notebooks are examples for playing with the TXED.
+
     
-    Then run the notebook 
-    Predict_MSEED_Japan.ipynb for the single-model (P and S together) example
-    Predict_MSEED_Japan_PS.ipynb for the double-model (P and S separately) example
+    4.. Single-station location example
+
 
     
 -----------
