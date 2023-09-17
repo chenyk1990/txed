@@ -14,6 +14,7 @@
 * You need to change the data path in Line 1032 "input_hdf5="
 * You can change the augmentation parameters (Line 1037-1044)
 * You can change the output directory name (Line 1033)
+* You can change the amount used for transfer learning in Line 791, i.e., change the "0.3".
 
 # 3- Run the "EQCCT_P_Test.py" to evaluate the performance of the EQCCT using the test set.
 * You need to change the path of the best model in Line 1123 "input_model". You should find the pre-trained model in the output directory you created during the training process.
