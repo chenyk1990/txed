@@ -6,9 +6,9 @@
 
 ## Examples
 1- In this directory, we have three files:
-train_EQ_Texas.npy --- The IDs for training.
-valid_EQ_Texas.npy --- The IDs for validation.
-test_EQ_Texas.npy  --- The IDs for testing.
+* train_EQ_Texas.npy --- The IDs for training.
+* valid_EQ_Texas.npy --- The IDs for validation.
+* test_EQ_Texas.npy  --- The IDs for testing.
 
 2- Run the "ECCT_P_Train.py" to train the EQCCT model.
 * You need to change the data path in Line 1033 "input_hdf5="
