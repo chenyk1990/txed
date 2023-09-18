@@ -11,6 +11,7 @@ Example:
 python test_event.py texnet2018ajoc Z 1
 python test_event.py texnet2020kijr
 python test_event.py texnet2023qnms
+python test_event.py texnet2023qnms Z 1 TXEDPATH
 """
 import argparse
 import obspy
@@ -40,24 +41,30 @@ def getargs():
 
     parser.add_argument('ifmap', nargs='?', 
         default=1) #if plot source on map
-             
+
+    parser.add_argument('txedpath', nargs='?', 
+        default='DATALIB') #if plot source on map
+         
     return parser.parse_args()
 
 if os.path.isdir(os.getenv('HOME')+'/DATALIB/tmp/TXED/pickfig') == False:  
 	os.makedirs(os.getenv('HOME')+'/DATALIB/tmp/TXED/pickfig',exist_ok=True)
 
-def run(eid,ic,ifmap):
+def run(eid,ic,ifmap,txedpath):
 	'''
 	eid: 		str
 	ic:			str (Z,N,E component)
 	ifmap:		int if plot on map (location)
 	'''
 	print('EVENT ID is',eid)
-# 	fname=os.getenv('HOME')+'/DATALIB/TXED/TXED_0918.h5'
-# 	eventid=np.load(os.getenv('HOME')+'/DATALIB/TXED/ID_0918.npy')
-	fname=os.getenv('HOME')+'/DATALIB/TXED/TXED_0913.h5'
-	eventid=np.load(os.getenv('HOME')+'/DATALIB/TXED/ID_0913.npy')
-	
+	if txedpath == 'DATALIB':
+		fname=os.getenv('HOME')+'/DATALIB/TXED/TXED_0918.h5'
+		eventid=np.load(os.getenv('HOME')+'/DATALIB/TXED/ID_0918.npy')
+	else:
+		print(txedpath)
+		fname=txedpath+'/TXED_0918.h5'
+		eventid=np.load(txedpath+'/ID_0918.npy')
+		
 	print('Len of eventid is',len(eventid))
 
 	f = h5py.File(fname, 'r')
@@ -139,8 +146,8 @@ if __name__ == '__main__':
     print('eid:',args.eid)
     print('ic:',args.ic)
     print('ifmap:',args.ifmap)
-    print('figpath:',os.getenv('HOME')+'/DATALIB/tmp/pickfig/%s-%s.png'%(args.eid,args.ic))
-    run(str(args.eid),str(args.ic),int(args.ifmap))
+    print('figpath:',os.getenv('HOME')+'/DATALIB/tmp/TXED/pickfig/%s-%s.png'%(args.eid,args.ic))
+    run(str(args.eid),str(args.ic),int(args.ifmap),str(args.txedpath))
     
     
     
