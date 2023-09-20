@@ -6,8 +6,8 @@ plt.rcParams["figure.figsize"] = (7,8.2)
 if os.path.isdir('./waveforms') == False:  
 	os.makedirs('./waveforms',exist_ok=True)
 
-h5fname="TXED_0913.h5"
-npyfname="ID_0913.npy"
+h5fname="TXED_0919.h5"
+npyfname="ID_0919.npy"
 
 #open the h5file
 f = h5py.File(h5fname, 'r')
