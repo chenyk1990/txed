@@ -11,7 +11,7 @@ Example:
 python test_event.py texnet2018ajoc Z 1
 python test_event.py texnet2020kijr
 python test_event.py texnet2023qnms
-python test_event.py texnet2023qnms Z 1 TXEDPATH
+python test_event.py texnet2023qnms Z 1 TXEDPATH #e.g., python test_event.py texnet2023qnms Z 1 /Users/chenyk/DATALIB/TXED
 """
 import argparse
 import obspy

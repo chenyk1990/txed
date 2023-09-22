@@ -1,5 +1,8 @@
-from scipy.signal import butter, lfilter
+PATHTXED='/Users/chenyk/DATALIB/TXED/'
+h5fname="TXED_0919.h5"
+npyfname="ID_0919.npy"
 
+from scipy.signal import butter, lfilter
 def butter_bandpass(lowcut, highcut, fs, order=5):
     nyq = 0.5 * fs
     low = lowcut / nyq
@@ -15,12 +18,17 @@ def butter_bandpass_filter_zi(data, lowcut, highcut, fs, order=5):
     y,zo = lfilter(b, a, data, zi=zi*data[0])
     return y
 
-
-import h5py
+import h5py,os
 import numpy as np
-idall = np.load('/home/omar/EQCCT_Texas/ID_Texas_Test_Final.npy')
+
+if os.path.isdir('./loc') == False:  
+	os.makedirs('./loc',exist_ok=True)
+
+allid = np.load(PATHTXED+npyfname)
+signalid=[ii for ii in allid if ii.split("_")[-1]=='EV']
+print('Length of signalid is',len(signalid))
+
 datall = []
-jj = len(idall)
 snr = []
 ori = []
 mag = []
@@ -32,11 +40,13 @@ stlon = []
 evlat = []
 evlon = []
 
-f = h5py.File('/home/omar/EQCCT_Texas/Texas_Test_WithNoise_Final.h5', 'r')
+f = h5py.File(PATHTXED+h5fname, 'r')
 
-for kl in range(jj):
-
-    idx = idall[kl]
+for kl in range(len(signalid)):
+    if kl % 1000 ==0:
+        print(kl,'in',len(signalid))
+    
+    idx = signalid[kl]
     dataset = f.get(idx)
     
     if (idx.split('_')[-1]=='EV') and (idx.split('_')[1]=='PECS'):
@@ -67,7 +77,6 @@ for kl in range(jj):
             evlat.append(dataset.attrs['ev_latitude'])
             
             idapp.append(idx)
-
 
 np.save('./loc/evlat',evlat)
 np.save('./loc/evlon',evlon)
