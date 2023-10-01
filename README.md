@@ -5,13 +5,13 @@
 **TXED** is the Texas Earthquake Dataset for AI
 
 ## Reference
-    Chen, et al., 2023, TXED: the Texas Earthquake Dataset for AI, TBD.
+    Omar, et al., 2023, Transfer Learning for Seismic Phase Picking in Texas, TBD.
     
 BibTeX:
 
 	@article{txed,
-	  title={TXED: the Texas Earthquake Dataset for AI},
-	  author={Chen et al.},
+	  title={Transfer Learning for Seismic Phase Picking in Texas},
+	  author={Omar et al.},
 	  journal={TBD},
 	  volume={TBD},
 	  number={TBD},
