@@ -121,7 +121,7 @@ Plot signal waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax1.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		ax1.set_xticklabels([])
 		ax = fig.add_subplot(312) 
 		plt.plot(data[:,1], 'k',label='N')
@@ -131,7 +131,7 @@ Plot signal waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		ax.set_xticklabels([])
 		ax = fig.add_subplot(313) 
 		plt.plot(data[:,2], 'k',label='E')
@@ -141,7 +141,7 @@ Plot signal waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		plt.xlabel('Sample', fontsize=12) 
 
 		eid=idx.split("_")[0]
@@ -199,7 +199,7 @@ Plot noise waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax1.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		ax1.set_xticklabels([])
 		ax = fig.add_subplot(312) 
 		plt.plot(data[:,1], 'k',label='N')
@@ -207,7 +207,7 @@ Plot noise waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		ax.set_xticklabels([])
 		ax = fig.add_subplot(313) 
 		plt.plot(data[:,2], 'k',label='E')
@@ -215,7 +215,7 @@ Plot noise waveforms
 		legend_properties = {'weight':'bold'}
 		ymin, ymax = ax.get_ylim()
 		plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-		plt.ylabel('Amplitude', fontsize=12) 
+		plt.ylabel('Amplitude counts', fontsize=12) 
 		plt.xlabel('Sample', fontsize=12) 
 
 		no=idx.split("_")[0]
