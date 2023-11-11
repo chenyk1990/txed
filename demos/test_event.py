@@ -5,7 +5,7 @@ Created on Aug 2023
 
 Plot picks of TexNet catalog event using TXED (Texas earthquake dataset for AI)
 
-This example is only runnable for TXED_0919.h5 (earlier versions do not apply)
+This example is only runnable for TXED_20231111.h5 (earlier versions do not apply)
 
 Example:
 python test_event.py texnet2018ajoc Z 1
@@ -58,12 +58,12 @@ def run(eid,ic,ifmap,txedpath):
 	'''
 	print('EVENT ID is',eid)
 	if txedpath == 'DATALIB':
-		fname=os.getenv('HOME')+'/DATALIB/TXED/TXED_0919.h5'
-		eventid=np.load(os.getenv('HOME')+'/DATALIB/TXED/ID_0919.npy')
+		fname=os.getenv('HOME')+'/DATALIB/TXED/TXED_20231111.h5'
+		eventid=np.load(os.getenv('HOME')+'/DATALIB/TXED/ID_20231111.npy')
 	else:
 		print(txedpath)
-		fname=txedpath+'/TXED_0919.h5'
-		eventid=np.load(txedpath+'/ID_0919.npy')
+		fname=txedpath+'/TXED_20231111.h5'
+		eventid=np.load(txedpath+'/ID_20231111.npy')
 		
 	print('Len of eventid is',len(eventid))
 
