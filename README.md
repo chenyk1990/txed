@@ -40,7 +40,7 @@ Using the latest version
 -----------
 ## Download
 
-Google Drive link: https://drive.google.com/file/d/1G_DkttgkrfALjFQsdMLzSI3nIVmRplao/view?usp=sharing
+Google Drive link: https://drive.google.com/drive/folders/1WXVB8ytNB4bOaZ97oq6OmMRyAEg95trp?usp=sharing
 
 	wget /address_TBD/TXED_20231111.h5
 	wget /address_TBD/ID_20231111.npy
