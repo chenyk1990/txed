@@ -9,6 +9,7 @@
 
     
 BibTeX:
+
 	@Article{txed,
 	  author={Yangkang Chen and Alexandros Savvaidis and Omar M. Saad and Guo-Chin Dino Huang and Daniel Siervo and Vincent O’Sullivan and Cooper McCabe and Bede Uku and Preston Fleck and Grace Burke and Natalie L. Alvarez and Jessica Domino and Iason Grigoratos},
 	  title = {{TXED}: the Texas Earthquake Dataset for {AI}},
