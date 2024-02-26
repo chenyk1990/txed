@@ -6,11 +6,11 @@
 
 ## How to Run?
 # 1- In this directory, we have three files:
-* train_EQ_Texas.npy --- The IDs for training.
+* train_EQ_Texas.npy --- The IDs for training. (https://drive.google.com/file/d/1R34L-tG47zXyfxnfzMocB0UyzD7vyG0e/view?usp=drive_web)
 * valid_EQ_Texas.npy --- The IDs for validation.
 * test_EQ_Texas.npy  --- The IDs for testing.
 
-# 2- Run the "ECCT_P_Train.py" to train the EQCCT model.
+# 2- Run the "EQCCT_P_Train.py" to train the EQCCT model.
 * You need to change the data path in Line 1032 "input_hdf5="
 * You can change the augmentation parameters (Line 1037-1044)
 * You can change the output directory name (Line 1033)

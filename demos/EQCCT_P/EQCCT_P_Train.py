@@ -1029,7 +1029,7 @@ def _document_training(history, model, start_training, end_training, save_dir, s
         the_file.write('pre_emphasis: '+str(args['pre_emphasis'])+'\n')
 
 
-trainer1(input_hdf5= '/home/omar/EQCCT_Texas/Texas_Test_WithNoise_Final.h5',
+trainer1(input_hdf5= 'TXED/TXED_20231111.h5',
         output_name='test_trainer',                
         shuffle=True, 
         label_type='triangle',
