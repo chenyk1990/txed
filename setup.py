@@ -20,7 +20,7 @@ def read(*names, **kwargs):
 setup(
     name="txed",
     version="0.0.0.2",
-    license='GNU General Public License, Version 3 (GPLv3)',
+    license='MIT License',
     description="Texas Earthquake Dataset for AI",
     long_description=long_description,
     author="txed developing team",
@@ -42,8 +42,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Scientific/Engineering",
-        "Topic :: Scientific/Engineering :: Physics",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+        "Topic :: Scientific/Engineering :: Physics"
     ],
     keywords=[
         "seismology", "earthquake seismology", "exploration seismology", "array seismology", "denoising", "science", "engineering", "structure", "local slope", "filtering"
