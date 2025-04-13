@@ -35,6 +35,7 @@ from obspy import UTCDateTime
 from obspy.clients.fdsn.client import Client
 	
 
+## Single stream test
 # sta=dataset.attrs['station']
 # net=get_net_from_sta(sta)
 # trace_start_time=UTCDateTime(dataset.attrs['p_arrival_time'])-dataset.attrs['p_arrival_sample']*0.01
@@ -131,20 +132,15 @@ for idx in idxs:
 	ax1 = fig.add_subplot(412)
 	plt.plot(st1[0].data, 'k',label='Displacement Z')
 	ymin,yma = ax1.get_ylim()
-# 	plt.vlines(spt,ymin,yma,color='r',linewidth=2)
-# 	plt.vlines(sst,ymin,yma,color='b',linewidth=2)
 	legend_properties = {'weight':'bold'}
 	ymin, ymax = ax1.get_ylim()
 	plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-# 	plt.ylabel('Displacement', fontsize=12) 
 	plt.ylabel('Meters', fontsize=12) 
 	ax1.set_xticklabels([])
 	
 	ax1 = fig.add_subplot(413) 
 	plt.plot(st2[0].times("matplotlib"),st2[0].data, 'k',label='Velocity Z')
 	ymin,yma = ax1.get_ylim()
-# 	plt.vlines(spt,ymin,yma,color='r',linewidth=2)
-# 	plt.vlines(sst,ymin,yma,color='b',linewidth=2)
 	legend_properties = {'weight':'bold'}
 	ymin, ymax = ax1.get_ylim()
 	plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
@@ -154,16 +150,12 @@ for idx in idxs:
 	ax1 = fig.add_subplot(414) 
 	plt.plot(st3[0].times("matplotlib"),st3[0].data, 'k',label='Acceleration Z')
 	ymin,yma = ax1.get_ylim()
-# 	plt.vlines(UTCDateTime(spt),ymin,yma,color='r',linewidth=2)
-# 	plt.vlines(UTCDateTime(sst),ymin,yma,color='b',linewidth=2)
 	legend_properties = {'weight':'bold'}
 	ymin, ymax = ax1.get_ylim()
 	plt.legend(loc = 'upper right', borderaxespad=0., prop=legend_properties)
-# 	plt.ylabel('Acceleration', fontsize=12) 
 	plt.ylabel('Meters/Second^2', fontsize=12) 
 	ax1.xaxis_date()
 # 	fig.autofmt_xdate()
-# 	plt.xlabel('Sample', fontsize=12) 
 
 	eid=idx.split("_")[0]
 	stname=idx.split("_")[1]
