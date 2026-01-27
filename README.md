@@ -238,6 +238,7 @@ The Ipython Notebooks are examples for playing with the TXED.
 
 
 Visualize the Texas Earth Models for Location
+
 	import numpy as np
 	import matplotlib.pyplot as plt
 	from pyseistr import plot3d #pip install --no-build-isolation git+https://github.com/aaspip/pyseistr
