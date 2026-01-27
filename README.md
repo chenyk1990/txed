@@ -231,9 +231,7 @@ Plot noise waveforms
 		plt.close() 
 	f.close()
 
-The Ipython Notebooks are examples for playing with the TXED.
-
-    
+<!-- The Ipython Notebooks are examples for playing with the TXED. -->
 <!-- Single-station location example -->
 
 
