@@ -272,6 +272,39 @@ Visualize the Texas Earth Models for Location
 	plt.savefig('DB1D.png')
 	plt.show()
 
+	# plot on lon/lat
+	nx=101;ny=72;nz=52; #x,y,z's size
+	lon1,lon2=-104.7,-103.7
+	lat1,lat2=31.3,31.9
+	dlon=(lon2-lon1)/(nx-1)
+	dlat=(lat2-lat1)/(ny-1)
+	lons=np.linspace(0,nx-1,nx)*dlon+lon1
+	lats=np.linspace(0,ny-1,ny)*dlat+lat1
+
+	plot3d(V_welllog,z=z,x=lons,y=lats,frames=[20,50,30],cmap=plt.cm.jet,barlabel='P-wave velocity (km/s)',showf=False,close=False);
+	plt.gca().set_xlabel("Longitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_ylabel("Latitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_zlabel("Depth (km)",fontsize='large', fontweight='normal')
+	plt.title("DB3D",fontsize='large', fontweight='normal')
+	plt.savefig('DB3D_latlon.png')
+	plt.show()
+
+	plot3d(V_tomo,z=z,x=lons,y=lats,frames=[20,50,30],cmap=plt.cm.jet,barlabel='P-wave velocity (km/s)',showf=False,close=False);
+	plt.gca().set_xlabel("Longitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_ylabel("Latitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_zlabel("Depth (km)",fontsize='large', fontweight='normal')
+	plt.title("CMEZ3D",fontsize='large', fontweight='normal')
+	plt.savefig('CMEZ3D_latlon.png')
+	plt.show()
+
+	plot3d(V_1D,z=z,x=lons,y=lats,frames=[20,50,30],cmap=plt.cm.jet,barlabel='P-wave velocity (km/s)',showf=False,close=False);
+	plt.gca().set_xlabel("Longitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_ylabel("Latitude (deg)",fontsize='large', fontweight='normal')
+	plt.gca().set_zlabel("Depth (km)",fontsize='large', fontweight='normal')
+	plt.title("DB1D",fontsize='large', fontweight='normal')
+	plt.savefig('DB1D_latlon.png')
+	plt.show()
+
 -----------
 ## Development
     The development team welcomes voluntary contributions from any open-source enthusiast. 
@@ -310,6 +343,8 @@ A few examples of the available earth models in West Texas constructed through T
 <img src='https://github.com/chenyk1990/gallery/blob/main/txed/CMEZ3D.png' alt='Slicing' width=960/>
 <img src='https://github.com/chenyk1990/gallery/blob/main/txed/DB1D.png' alt='Slicing' width=960/>
 
-
+<img src='https://github.com/chenyk1990/gallery/blob/main/txed/DB3D_latlon.png' alt='Slicing' width=960/>
+<img src='https://github.com/chenyk1990/gallery/blob/main/txed/CMEZ3D_latlon.png' alt='Slicing' width=960/>
+<img src='https://github.com/chenyk1990/gallery/blob/main/txed/DB1D_latlon.png' alt='Slicing' width=960/>
 
 
