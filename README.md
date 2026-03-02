@@ -242,7 +242,7 @@ Visualize the Texas Earth Models for Location
 	from pyseistr import plot3d #pip install --no-build-isolation git+https://github.com/aaspip/pyseistr
 
 	V_welllog=np.load('vmodel/V_welllog.npy')
-	V_tomo=np.load('vmodel/V_tomo.npy')
+	V_tomo=np.load('vmodel/V_tomo.npy') #52*101*72, CMEZ3D-20260202
 	V_1D=np.load('vmodel/V_1D.npy')
 	x=np.load('vmodel/x.npy')
 	y=np.load('vmodel/y.npy')
