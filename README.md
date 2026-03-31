@@ -5,7 +5,7 @@
 **TXED** is the Texas Earthquake Dataset for AI
 
 ## Reference
-	Chen, Y., A. Savvaidis, O. M. Saad, G.-C. D. Huang, D. Siervo, V. O’Sullivan, C. McCabe, B. Uku, P. Fleck, G. Burke, N. L. Alvarez, J. Domino, and I. Grigoratos, “TXED: the texas earthquake dataset for AI,” Seismological Research Letters, vol. 1, no. 1, p. doi: 10.1785/0220230327, 2024.
+	Chen, Y., A. Savvaidis, O. M. Saad, G.-C. D. Huang, D. Siervo, V. O’Sullivan, C. McCabe, B. Uku, P. Fleck, G. Burke, N. L. Alvarez, J. Domino, and I. Grigoratos, “TXED: the texas earthquake dataset for AI,” Seismological Research Letters, vol. 95, no. 3, p. 2013–2022, doi: 10.1785/0220230327, 2024.
 
     
 BibTeX:
@@ -15,10 +15,10 @@ BibTeX:
 	  title = {{TXED}: the Texas Earthquake Dataset for {AI}},
 	  journal={Seismological Research Letters},
 	  year=2024,
-	  volume=1,
-	  issue=1,
-	  number=1,
-	  pages={doi: 10.1785/0220230327},
+	  volume=95,
+	  issue=3,
+	  number=3,
+	  pages={2013–2022},
 	  doi={10.1785/0220230327},
 	}
 
